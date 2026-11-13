@@ -1,0 +1,779 @@
+--------r1.py-------
+def collatz(n):
+    if n % 2 == 1:
+        return 3*n+1
+    return n // 2
+
+def main():
+    while True:
+        n = input("Press q to quit or a positive integer: ")
+        if n == "q":
+            break
+        n = int(n)
+        print(f"collatz{n} = {collatz(n)}")
+
+if __name__ == '__main__':
+    main()
+
+
+"""sample output
+cs100fa2026/review2/ $ python r1.py
+Press q to quit or a positive integer: 2
+collatz2 = 1
+Press q to quit or a positive integer: 5
+collatz5 = 16
+Press q to quit or a positive integer: 6
+collatz6 = 3
+Press q to quit or a positive integer: 7
+collatz7 = 22
+Press q to quit or a positive integer: q
+cs100fa2026/review2/ $ 
+"""
+ 
+--------r2.py-------
+def longdiv(a,b):
+    q = a//b
+    r = a % b
+    return (q,r)
+
+def isInt(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+
+def main():
+    while True:
+        ans = input("Enter q to quit or a pair of 2 integers: ")
+        if ans == 'q':
+            break
+        t = ans.split(' ')
+        if len(t) != 2:
+            print('Invalid input...')
+            continue    #continue has to be a part of if statement, not by itself
+        if isInt(t[0]) == False or isInt(t[1]) == False:
+            print('Invalid input...')
+            continue
+        a = int(t[0])
+        b = int(t[1])
+        if b == 0:
+            print("Division by 0 is not defined.")
+            continue
+        t = longdiv(a,b)
+        print(f"{a} = {b}*{t[0]}+{t[1]}")
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+"""sample output
+cs100fa2026/review2/ $ python r2.py
+Enter q to quit or a pair of 2 integers: 3 4
+3 = 4*0+3
+Enter q to quit or a pair of 2 integers: r q
+Invalid input...
+Enter q to quit or a pair of 2 integers: -2 5
+-2 = 5*-1+3
+Enter q to quit or a pair of 2 integers: q
+cs100fa2026/review2/ $
+"""
+ 
+--------r3.py-------
+def tofeetinches(n):
+    # n = number of yards
+    # 1 yard = 3 feet = 36 inches
+    return (3*n,36*n)
+
+def main():
+    while True:
+        n = input("Enter q to quit or a nonnegative number of yards: ")
+        if n == 'q':
+            break
+        n = int(n)
+        fi = tofeetinches(n)
+        f = fi[0]
+        i = fi[1]
+        print(f"{n} yards = {f} feet = {i} inches")
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+"""sample output
+cs100fa2026/review2/ $ python r3.py
+Enter q to quit or a nonnegative number of yards: 5
+5 yards = 15 feet = 180 inches
+Enter q to quit or a nonnegative number of yards: 7
+7 yards = 21 feet = 252 inches
+Enter q to quit or a nonnegative number of yards: 1
+1 yards = 3 feet = 36 inches
+Enter q to quit or a nonnegative number of yards: 33
+33 yards = 99 feet = 1188 inches
+Enter q to quit or a nonnegative number of yards: q
+cs100fa2026/review2/ $ 
+"""
+ 
+--------r4.py-------
+def tolbsandoz(n):
+    # n = number of grams
+    #assume  1oz = 28.35 grams
+    totoz = n / 28.35
+    lbs = int(totoz/16)
+    oz = totoz%16
+    return (lbs,oz)
+
+def main():
+    while True:
+        n = input("Enter q to quit or a nonnegative number of grams: ")
+        if n == 'q':
+            break
+        n = float(n)
+        lboz = tolbsandoz(n)
+        lb = lboz[0]
+        oz = lboz[1]
+        print(f'{n} grams = {lb}lbs {oz:.1f}oz')
+
+if __name__ == '__main__':
+    main()
+
+
+"""sample output
+cs100fa2026/review2/ $ python r4.py
+Enter q to quit or a nonnegative number of grams: 1000
+1000.0 grams = 2lbs 3.3oz
+Enter q to quit or a nonnegative number of grams: 453.6
+453.6 grams = 1lbs 0.0oz
+Enter q to quit or a nonnegative number of grams: 63
+63.0 grams = 0lbs 2.2oz
+Enter q to quit or a nonnegative number of grams: q
+cs100fa2026/review2/ $ 
+"""
+ 
+--------r5.py-------
+def digitcount(s):
+    k = 0
+    for i in range(len(s)):
+        if s[i] in '0123456789':
+            k  += 1
+    return k
+
+def main():
+    while True:
+        s = input("Enter q to quit or a string: ")
+        if s == 'q':
+            break
+        k = digitcount(s)
+        print(f"The string has {k} digit characters.")
+
+if __name__ == '__main__':
+    main()
+
+
+
+"""sample output
+cs100fa2026/review2/ $ python r5.py
+Enter q to quit or a string: today is 11/04
+The string has 4 digit characters.
+Enter q to quit or a string: hello there
+The string has 0 digit characters.
+Enter q to quit or a string: q
+cs100fa2026/review2/ $
+"""
+ 
+--------r6.py-------
+def upperlettercount(s):
+    k = 0
+    for c in s:
+        if 'A' <= c <='Z':
+            k  += 1
+    return k
+
+def main():
+    while True:
+        s = input("Enter q to quit or a string: ")
+        if s == 'q':
+            break
+        k = upperlettercount(s)
+        print(f"The string has {k} uppper letters.")
+
+if __name__ == '__main__':
+    main()
+
+
+
+"""sample output
+cs100fa2026/review2/ $ python r6.py
+Enter q to quit or a string: Today is Wednesday
+The string has 2 uppper letters.
+Enter q to quit or a string: TomORROW is THursday
+The string has 8 uppper letters.
+Enter q to quit or a string: q
+cs100fa2026/review2/ $ 
+"""
+ 
+--------r7.py-------
+def sum(v):
+    s = 0
+    for i in v:
+        s += i
+    return s
+
+def value(v):
+    try:
+        float(v)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of numbers separated by space:\n ")
+        if s == 'q':
+            break
+        list = []
+        for item in s.split(' '):
+            if value(item):
+                list.append(float(item))
+        print(list)
+        s = sum(list)
+        print(f"The sum of the value is {s}.")
+
+if __name__ == '__main__':
+    main()
+
+
+'''sample output
+cs100fa2026/review2/ $ python r7.py
+Enter q to quit or a list of numbers separated by space:
+ 45 -67 ituj 5 8
+[45.0, -67.0, 5.0, 8.0]
+The sum of the value is -9.0.
+Enter q to quit or a list of numbers separated by space:
+ 2 3 4 5
+[2.0, 3.0, 4.0, 5.0]
+The sum of the value is 14.0.
+Enter q to quit or a list of numbers separated by space:
+ swi to 6 -.06 24.65
+[6.0, -0.06, 24.65]
+The sum of the value is 30.59.
+Enter q to quit or a list of numbers separated by space:
+ q
+cs100fa2026/review2/ $
+'''
+ 
+--------r8.py-------
+def average(list):
+    return sum(list)/len(list)
+
+def value(v):
+    try:
+        float(v)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of numbers separated by space:\n ")
+        if s == 'q':
+            break
+        list = []
+        for item in s.split(' '):
+            if value(item):
+                list.append(float(item))
+        print(list)
+        av = average(list)
+        print(f"The average of the values is {av}.")
+
+if __name__ == '__main__':
+    main()
+
+
+'''sample output
+cs100fa2026/review2/ $ python r8.py
+Enter q to quit or a list of numbers separated by space:
+ 5 6 7
+[5.0, 6.0, 7.0]
+The average of the values is 6.0.
+Enter q to quit or a list of numbers separated by space:
+ 3 5 -7 .6 7.4 6 rfw 6 hghd
+[3.0, 5.0, -7.0, 0.6, 7.4, 6.0, 6.0]
+The average of the values is 3.0.
+Enter q to quit or a list of numbers separated by space:
+ q
+cs100fa2026/review2/ $
+
+'''
+ 
+--------r9.py-------
+def maximum(v):
+    m = v[0]
+    for i in v:
+        if m < i:
+            m = i
+    return m
+
+def value(v):
+    try:
+        float(v)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of numbers separated by space:\n ")
+        if s == 'q':
+            break
+        list = []
+        for item in s.split(' '):
+            if value(item):
+                list.append(float(item))
+        print(list)
+        m = maximum(list)
+        print(f"The maximun of the values is {m}.")
+
+if __name__ == '__main__':
+    main()
+
+
+'''sample output
+cs100fa2026/review2/ $ python r9.py
+Enter q to quit or a list of numbers separated by space:
+  6 7 8 -1
+[6.0, 7.0, 8.0, -1.0]
+The maximun of the values is 8.0.
+Enter q to quit or a list of numbers separated by space:
+ er 96 0hh e3 5
+[96.0, 5.0]
+The maximun of the values is 96.0.
+Enter q to quit or a list of numbers separated by space:
+ q
+cs100fa2026/review2/ $ 
+'''
+ 
+--------r10.py-------
+def lettergrade(g):
+    if 90 <= g:
+        letter = "A"
+    elif 80 <= g < 90:
+        letter = "B"
+    elif 70 <= g < 80:
+        letter = "C"
+    elif 60 <= g < 70:
+        letter = "D"
+    else:
+        letter = "F"
+    return letter
+
+def main():
+    print("Enter q to quit at anytime...")
+    while True:
+        g = input("Enter a grade between 0 and 100: ")
+        if g == 'q':
+            break
+        g = float(g)
+        lg = lettergrade(g)
+        print(f"grade of {g} = letter grade of {lg}")
+        
+if __name__ == '__main__':
+    main()
+
+"""sample output
+cs100fa2026/8functions/ $ touch ex7.py
+cs100fa2026/8functions/ $ python ex7.py
+Enter q to quit at anytime...
+Enter a grade between 0 and 100: 60
+grade of 60.0 = letter grade of D
+Enter a grade between 0 and 100: 10
+grade of 10.0 = letter grade of F
+Enter a grade between 0 and 100: 99
+grade of 99.0 = letter grade of A
+Enter a grade between 0 and 100: 78
+grade of 78.0 = letter grade of C
+Enter a grade between 0 and 100: q
+cs100fa2026/8functions/ $
+"""
+ 
+--------r11.py-------
+def lowerlettercount(s):
+    k = 0
+    for c in s:
+        if 'a' <= c <= 'z':
+            k += 1
+    return k
+
+def main():
+    while True:
+        s = input("Enter q to quit or a string:\n ")
+        if s == 'q':
+            break
+        k = lowerlettercount(s)
+        print(f"The string has {k} lower letters.")
+
+if __name__ == '__main__':
+    main()
+
+"""sample output
+cs100fa2026/review2/ $ python r11.py
+Enter q to quit or a string:
+ Today is a nice day
+The string has 14 lower letters.
+Enter q to quit or a string:
+ how many
+The string has 7 lower letters.
+Enter q to quit or a string:
+ -134 is a negative number
+The string has 17 lower letters.
+Enter q to quit or a string:
+ q
+cs100fa2026/review2/ $
+"""
+ 
+--------r12.py-------
+def range(v):
+    mx = mn = v[0]
+    for i in v:
+        if mx < i:
+            mx = i
+        if mn > i:
+            mn = i
+    return mx - mn
+
+def value(v):
+    try:
+       float(v)
+       return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of numbers separated by space:\n ")
+        if s == 'q':
+            break
+        list = []
+        for item in s.split(' '):
+            if value(item):
+                list.append(float(item))
+        print(list)
+        r = range(list)
+        print(f'The range of the values is {r}.')
+
+if __name__ == '__main__':
+    main()
+
+"""sample output
+cs100fa2026/review2/ $ python r12.py
+Enter q to quit or a list of numbers separated by space:
+ wtr  5 7 8 -1 10
+[5.0, 7.0, 8.0, -1.0, 10.0]
+The range of the values is 11.0.
+Enter q to quit or a list of numbers separated by space:
+ q
+cs100fa2026/review2/ $
+"""
+ 
+--------r13.py-------
+def median(v):
+   v.sort()
+   if len(v) % 2 == 1:
+       return v[(len(v)-1)//2]
+   p = len(v)//2
+   return (v[p-1]+v[p])/2
+
+
+def value(v):
+    try:
+       float(v)
+       return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of numbers separated by space:\n ")
+        if s == 'q':
+            break
+        list = []
+        for item in s.split(' '):
+            if value(item):
+                list.append(float(item))
+        print(list)
+        med = median(list)
+        print(f'The median value is {med}.')
+
+if __name__ == '__main__':
+    main()
+
+"""sample output
+cs100fa2026/review2/ $ python r13.py
+Enter q to quit or a list of numbers separated by space:
+ 1 2 3 4 5
+[1.0, 2.0, 3.0, 4.0, 5.0]
+The median value is 3.0.
+Enter q to quit or a list of numbers separated by space:
+ -1 5 7 8 2 5 5
+[-1.0, 5.0, 7.0, 8.0, 2.0, 5.0, 5.0]
+The median value is 5.0.
+Enter q to quit or a list of numbers separated by space:
+ q
+cs100fa2026/review2/ $
+"""
+ 
+--------r14.py-------
+import random as rd
+def rps():
+    dict = {1:'Scissors', 2:'Paper', 3:'Rock'}
+    you = int(input(" 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': "))
+    mac = rd.randint(1,3)
+    print(f"You: {dict[you]} vs Machine: {dict[mac]}")
+
+    winning = [ (2,1), (3,2), (1,3) ]  #(you,mac)
+    drawing = [ (1,1), (2,2), (3,3) ]
+    losing  = [ (1,2), (2,3), (3,1) ]
+
+    if (you,mac) in winning:
+        print(f'You win: {dict[you]} beats {dict[mac]}.')
+    elif (you,mac) in drawing:
+        print(f'The game is a draw: {dict[you]} vs {dict[mac]}.')
+    else:
+        print(f'You lose: {dict[mac]} beats {dict[you]}.')
+
+def main():
+    print('Rock-Paper-Scissors\n')
+    while True:
+        s = input('Enter q to quit or anything else to play: ')
+        if s == 'q':
+            break
+        rps()
+        print('-----------------------------------------\n')
+
+if __name__ == '__main__':
+    main()
+
+
+'''sample output
+cs100fa2026/review2/ $ python r14.py
+Rock-Paper-Scissors
+
+Enter q to quit or anything else to play:
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 2
+You: Paper vs Machine: Scissors
+You win: Paper beats Scissors.
+-----------------------------------------
+
+Enter q to quit or anything else to play:
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 1
+You: Scissors vs Machine: Scissors
+The game is a draw: Scissors vs Scissors.
+-----------------------------------------
+
+Enter q to quit or anything else to play:
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 3
+You: Rock vs Machine: Scissors
+You lose: Scissors beats Rock.
+-----------------------------------------
+
+Enter q to quit or anything else to play: q
+cs100fa2026/review2/ $
+'''
+ 
+--------r15.py-------
+import random as rd
+def rps():
+    dict = {1:'Scissors', 2:'Paper', 3:'Rock'}
+    you = int(input(" 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': "))
+    mac = rd.randint(1,3)
+    print(f"You: {dict[you]} vs Machine: {dict[mac]}")
+
+    winning = [ (2,1), (3,2), (1,3) ]  #(you,mac)
+    drawing = [ (1,1), (2,2), (3,3) ]
+    losing  = [ (1,2), (2,3), (3,1) ]
+
+    if (you,mac) in winning:
+        print(f'You win: {dict[you]} beats {dict[mac]}.')
+        return 'win'
+    elif (you,mac) in drawing:
+        print(f'The game is a draw: {dict[you]} vs {dict[mac]}.')
+        return 'draw'
+    else:
+        print(f'You lose: {dict[mac]} beats {dict[you]}.')
+        return 'lose'
+
+def main():
+    print('Rock-Paper-Scissors\n')
+    while True:
+        s = input('Enter q to quit or anything else to play: ')
+        if s == 'q':
+            break
+        wincount = losecount = 0
+        while wincount < 2 and losecount < 2:
+            result = rps()
+            if result == 'win':
+                wincount += 1
+            if result == 'lose':
+                losecount += 1
+            print(f'Score You vs Mac: {wincount}-{losecount}')
+        if wincount == 2:
+            print('You won the game!')
+        else:
+            print('You lost the game!')
+        print('-----------------------------------------\n')
+
+if __name__ == '__main__':
+    main()
+
+
+'''sample output
+cs100fa2026/review2/ $ python r15.py
+Rock-Paper-Scissors
+
+Enter q to quit or anything else to play:
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 1
+You: Scissors vs Machine: Paper
+You lose: Paper beats Scissors.
+Score You vs Mac: 0-1
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 1
+You: Scissors vs Machine: Paper
+You lose: Paper beats Scissors.
+Score You vs Mac: 0-2
+You lost the game!
+-----------------------------------------
+
+Enter q to quit or anything else to play:
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 2
+You: Paper vs Machine: Rock
+You lose: Rock beats Paper.
+Score You vs Mac: 0-1
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 2
+You: Paper vs Machine: Paper
+The game is a draw: Paper vs Paper.
+Score You vs Mac: 0-1
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 2
+You: Paper vs Machine: Scissors
+You win: Paper beats Scissors.
+Score You vs Mac: 1-1
+ 1 for 'Scissors', 2 for 'Paper', or 3 for'Rock': 2
+You: Paper vs Machine: Scissors
+You win: Paper beats Scissors.
+Score You vs Mac: 2-1
+You won the game!
+-----------------------------------------
+
+Enter q to quit or anything else to play: q
+cs100fa2026/review2/ $ 
+'''
+ 
+--------r16.py-------
+import random as rd
+def play(secret):
+    i = 1
+    while ( i <= 5 ):
+        ans = input(f'Guess {i} is: ')
+        ans = int(ans)
+        if ans == secret:
+            return True
+        i += 1
+    return False
+
+def main():
+    print('The Game is: Guess a number from 1 to 20 in 5 tries...' )
+    while True:
+        s = input('Enter q to quit or anything else to continue: ' )
+        if s == 'q':
+            break
+        secret = rd.randint(1,20)
+        win = play(secret)
+        if win:
+            print("Congratulation: You won the game!")
+        else:
+            print(f'You lost. The secret number is {secret}.')
+
+if __name__ == '__main__':
+    main()
+
+"""sample output
+cs100fa2026/review2/ $ python r16.py
+The Game is: Guess a number from 1 to 20 in 5 tries...
+Enter q to quit or anything else to continue: 1
+Guess 1 is: 1
+Guess 2 is: 3
+Guess 3 is: 7
+Guess 4 is: 8
+Guess 5 is: 9
+You lost. The secret number is 14.
+Enter q to quit or anything else to continue:
+Guess 1 is: 1
+Guess 2 is: 2
+Guess 3 is: 3
+Guess 4 is: 4
+Guess 5 is: 5
+Congratulation: You won the game!
+Enter q to quit or anything else to continue:
+Guess 1 is: 6
+Guess 2 is: 8
+Guess 3 is: 9
+Guess 4 is: 14
+Guess 5 is: 3
+Congratulation: You won the game!
+Enter q to quit or anything else to continue:q
+cs100fa2026/review2/ $
+"""
+ 
+--------r17.py-------
+while True:
+    ans = input("Enter q to quit or temperature in F degree: ")
+    if ans == "q":
+        break
+    ftmp = float(ans)
+    ctmp = 5*(ftmp-32)/9
+    print( f"{ftmp:.2f} degrees F = {ctmp:.2f} degrees C" )
+
+
+
+'''sample output
+cs100fa2026/review2/ $ python r17.py
+Enter q to quit or temperature in F degree: 45
+45.00 degrees F = 7.22 degrees C
+Enter q to quit or temperature in F degree: 67
+67.00 degrees F = 19.44 degrees C
+Enter q to quit or temperature in F degree: 72
+72.00 degrees F = 22.22 degrees C
+Enter q to quit or temperature in F degree: 10
+10.00 degrees F = -12.22 degrees C
+Enter q to quit or temperature in F degree: 30
+30.00 degrees F = -1.11 degrees C
+Enter q to quit or temperature in F degree: 32
+32.00 degrees F = 0.00 degrees C
+Enter q to quit or temperature in F degree: q
+cs100fa2026/review2/ $
+'''
+ 
+--------r18.py-------
+while True:
+    s = input('Enter q to quit or weight measured in pounds: ')
+    if s == 'q':
+        break
+    lbs = float(s)
+    g = round(453.592*lbs)
+    print(f'{lbs} lbs = {g} grams.')
+
+'''sample output
+cs100fa2026/review2/ $ python r18.py
+Enter q to quit or weight measured in pounds: 5
+5.0 lbs = 2268 grams.
+Enter q to quit or weight measured in pounds: 13
+13.0 lbs = 5897 grams.
+Enter q to quit or weight measured in pounds: q
+cs100fa2026/review2/ $
+'''
+ 

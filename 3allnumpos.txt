@@ -1,0 +1,186 @@
+-------ex1.py-------
+""" operations with float point numbers (decimal/real number) """
+x = input("Enter a real number: ")
+x = float(x)
+y = input("Enter a real number: ")
+y = float(y)
+
+s = x + y
+print(f"{x} + {y} = {s}")
+
+d = x - y
+print(f"{x} - {y} = {d}")
+
+p = x * y
+print(f"{x} * {y} = {p}")
+
+q = x / y
+print(f"{x} / {y} = {q}")
+
+pw = x ** y
+print(f"{x} ** {y} = {pw}")
+
+""" SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex1.py
+Enter a real number: 5.6
+Enter a real number: 2.3
+5.6 + 2.3 = 7.8999999999999995
+5.6 - 2.3 = 3.3
+5.6 * 2.3 = 12.879999999999999
+5.6 / 2.3 = 2.4347826086956523
+5.6 ** 2.3 = 52.581438372010965
+cs100fa2026/3numops/ $
+"""
+ 
+-------ex2.py-------
+""" operations with integer numbers """
+x = input("Enter an int: ")
+x = int(x)
+y = input("Enter an int: ")
+y = int(y)
+
+s = x + y
+print(f"{x} + {y} = {s}")
+
+d = x - y
+print(f"{x} - {y} = {d}")
+
+p = x * y
+print(f"{x} * {y} = {p}")
+
+q = x / y
+print(f"{x} / {y} = {q}")
+
+pw = x ** y
+print(f"{x} ** {y} = {pw}")
+
+""" SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex2.py
+Enter a real number: 5
+Enter a real number: 6
+5 + 6 = 11
+5 - 6 = -1
+5 * 6 = 30
+5 / 6 = 0.8333333333333334
+5 ** 6 = 15625
+cs100fa2026/3numops/ $
+"""
+ 
+-------ex3.py-------
+'''operations with mixed types '''
+x = input("Enter a real number: ")
+x = float(x)
+
+y = input("Enter an int: ")
+y = int(y)
+
+s = x+y
+print(f"{x} + {y} = {s}")
+
+'''SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex3.py
+Enter a real number: 5.2
+Enter an int: 3
+5.2 + 3 = 8.2
+cs100fa2026/3numops/ $
+'''
+ 
+-------ex4.py-------
+'''conversion between int, float, str '''
+a = input("Enter an int: ")
+a = int(a)
+a_float =  float(a)
+a_string = str(a)
+
+print(f"int(a) = {a}")
+print(f"float(a) = {a_float}")
+print(f"str(s) = {a_string}")
+
+x =  float(input("Enter a float value: "))
+x_int = int(x)
+x_string = str(x)
+print(f"float(x) = {x}")
+print(f"int(x) = {x_int}")
+print(f"str(x) = {x_string}")
+
+"""SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex4.py
+Enter an int: -89
+int(a) = -89
+float(a) = -89.0
+str(s) = -89
+Enter a float value: 2.563
+float(x) = 2.563
+int(x) = 2
+str(x) = 2.563
+cs100fa2026/3numops/ $
+"""
+ 
+-------ex5.py-------
+''' composite assignments '''
+x = input("Enter an integer x = ")
+x = int(x)
+print(f"x = {x}")
+
+x = x + 1
+print(f"x = x+1 changes x to {x}")
+x += 1
+print(f"x += 1 changes x to {x}")
+
+x += 5
+print(f"x += 5 changes x to {x}")
+
+''' SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex5.py
+Enter an integer x = 5
+x = 5
+x = x+1 changea x to 6
+cs100fa2026/3numops/ $ python ex5.py
+Enter an integer x = 5
+x = 5
+x = x+1 changea x to 6
+x += 1 changea x to 7
+cs100fa2026/3numops/ $ python ex5.py
+Enter an integer x = 5
+x = 5
+x = x+1 changes x to 6
+x += 1 changes x to 7
+x += 5 changes x to 12
+cs100fa2026/3numops/ $
+'''
+ 
+-------ex6.py-------
+''' composite assignments '''
+x = input("Enter a real value x = ")
+x = float(x)
+print(f"x = {x}")
+
+k = input("Enter a real value k = ")
+k = float(k)
+print(f"k = {k}")
+
+x += k     # increment x by k
+print(f"x += k changes x to {x}")
+
+x -= k     # decrease x by k
+print(f"x -= k changes x to {x}")
+
+x *= k     # multiply x by k
+print(f"x *= k changes x to {x}")
+
+x /= k     # divide x by k
+print(f"x /= k changes x to {x}")
+
+'''SAMPLE OUTPUT
+cs100fa2026/3numops/ $ python ex6.py
+Enter a real value x = 5
+x = 5.0
+Enter a real value k = 6
+k = 6.0
+x += k changes x to 11.0
+x -= k changes x to 5.0
+x *= k changes x to 30.0
+x /= k changes x to 5.0
+cs100fa2026/3numops/ $
+'''
+ 

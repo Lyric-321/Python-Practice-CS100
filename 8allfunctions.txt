@@ -1,0 +1,406 @@
+--------ex1.py-------
+def greet(name):
+    print(f"Hello, {name}!")
+
+def main():
+    list = ["Daniel", "Ana", "Carmen"]
+    for name in list:
+        greet(name)
+main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex1.py
+Hello, Daniel!
+Hello, Ana!
+Hello, Carmen!
+cs100fa2026/8functions/ $ 
+'''
+ 
+--------ex2.py-------
+def add(a,b):
+    return a+b
+
+def main():
+    while True:
+        ans = input("Enter q to quit: ")
+        if ans == "q":
+            break
+        a = float(input("Enter value a = "))
+        b = float(input("Enter value b = "))
+        s = add(a,b)
+        print(f"{a} + {b} = {s}")
+
+main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex2.py
+Enter q to quit:
+Enter value a = 2
+Enter value b = 5
+2.0 + 5.0 = 7.0
+Enter q to quit:
+Enter value a = 7
+Enter value b = -39.5
+7.0 + -39.5 = -32.5
+Enter q to quit: q
+cs100fa2026/8functions/ $
+'''
+ 
+--------ex3.py-------
+def value(v):
+    try:
+        float(v)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a values: ")
+        if s == "q":
+            break
+        if value(s):
+            print(f"{s} represents a number.")
+        else:
+            print(f"{s} does not represent a number.")
+
+main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex3.py
+Enter q to quit or a values: 4
+4 represents a number.
+Enter q to quit or a values: -3
+-3 represents a number.
+Enter q to quit or a values: .034
+.034 represents a number.
+Enter q to quit or a values: -.0056
+-.0056 represents a number.
+Enter q to quit or a values: 6.24e-31
+6.24e-31 represents a number.
+Enter q to quit or a values: e3
+e3 does not represent a number.
+Enter q to quit or a values: 1e3
+1e3 represents a number.
+Enter q to quit or a values: you
+you does not represent a number.
+Enter q to quit or a values: 1E2
+1E2 represents a number.
+Enter q to quit or a values: 3e0
+3e0 represents a number.
+Enter q to quit or a values: q
+cs100fa2026/8functions/ $
+'''
+ 
+--------ex4.py-------
+def add(list):
+    s = 0
+    for item in list:
+        s += item
+    return s
+
+def value(v):
+    try:
+        float(v)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    while True:
+        s = input("Enter q to quit or a list of values:\n ")
+        if s == "q":
+            break
+        list = []
+        for v in s.split(' '):
+            if value(v):
+                list.append(float(v))
+        print(list)
+        s = add(list)
+        print(f"The sum of the values is {s}. ")
+
+main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex3.py
+Enter q to quit or a list of values:
+ 2 3
+[2.0, 3.0]
+The sum of the values is 5.0.
+Enter q to quit or a list of values:
+ 6 7 0 -9
+[6.0, 7.0, 0.0, -9.0]
+The sum of the values is 4.0.
+Enter q to quit or a list of values:
+ d2 2g hf 2 3
+[2.0, 3.0]
+The sum of the values is 5.0.
+Enter q to quit or a list of values:
+ gg / 5 6hy / &% * _ ld 48 8 9
+[5.0, 48.0, 8.0, 9.0]
+The sum of the values is 70.0.
+Enter q to quit or a list of values:
+ q
+cs100fa2026/8functions/ $
+'''
+ 
+--------ex5.py-------
+# compute s = 1 + 2 + 3 + .. + n
+def sum(n):
+    s = 0
+    for i in range(1,n+1):
+        s += i
+    return s
+
+def main():
+    while True:
+        ans = input("Enter q to quit or a positive integer n: ")
+        if ans == "q":
+            break
+        n = int(ans)
+        s = sum(n)
+        # print the sum
+        if n > 10:
+            print(f"1 + 2 + . . . + {n} = {s}")
+        else:
+            print("1", end="")
+            for i in range(2,n+1):
+                print(f" + {i}", end="")
+            print(f" = {s}")
+
+main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex4.py
+Enter q to quit or a positive integer n: 2
+1 + 2 = 3
+Enter q to quit or a positive integer n: 6
+1 + 2 + 3 + 4 + 5 + 6 = 21
+Enter q to quit or a positive integer n: 1000
+1 + 2 + . . . + 1000 = 500500
+Enter q to quit or a positive integer n: q
+cs100fa2026/8functions/ $
+
+'''
+ 
+--------ex6.py-------
+# compute s = 1/1^2 + 1/2^2 + 1/3^2 + .. + 1/n^2
+
+def sum(n):
+    s = 0
+    for i in range(1,n+1):
+        s += 1.0/i/i
+    return s
+
+def main():
+    while True:
+        ans = input("Enter q to quit or a positive integer n: ")
+        if ans == "q":
+            break
+        n = int(ans)
+        s = sum(n)
+        # print the sum
+        if n > 10:
+            print(f"1 + 2/2^2 + . . . + 1/{n}^2 = {s}")
+        else:
+            print("1", end="")
+            for i in range(2,n+1):
+                print(f" + 1/{i}^2", end="")
+            print(f" = {s}")
+            
+if __name__ == "__main__":
+    main()
+
+'''sample output
+cs100fa2026/8functions/ $ python ex6.py
+Enter q to quit or a positive integer n: 5
+1 + 1/2^2 + 1/3^2 + 1/4^2 + 1/5^2 = 1.4636111111111112
+Enter q to quit or a positive integer n: 100
+1 + 2/2^2 + . . . + 1/100^2 = 1.6349839001848923
+Enter q to quit or a positive integer n: 10000
+1 + 2/2^2 + . . . + 1/10000^2 = 1.6448340718480652
+Enter q to quit or a positive integer n: q
+cs100fa2026/8functions/ $
+'''
+ 
+--------ex7.py-------
+def lettergrade(g):
+    if 90 <= g:
+        letter = "A"
+    elif 80 <= g < 90:
+        letter = "B"
+    elif 70 <= g < 80:
+        letter = "C"
+    elif 60 <= g < 70:
+        letter = "D"
+    else:
+        letter = "F"
+    return letter
+
+def main():
+    print("Enter q to quit at anytime...")
+    while True:
+        g = input("Enter a grade between 0 and 100: ")
+        if g == 'q':
+            break
+        g = float(g)
+        lg = lettergrade(g)
+        print(f"grade of {g} = letter grade of {lg}")
+
+main()
+
+"""sample output
+cs100fa2026/8functions/ $ touch ex7.py
+cs100fa2026/8functions/ $ python ex7.py
+Enter q to quit at anytime...
+Enter a grade between 0 and 100: 60
+grade of 60.0 = letter grade of D
+Enter a grade between 0 and 100: 10
+grade of 10.0 = letter grade of F
+Enter a grade between 0 and 100: 99
+grade of 99.0 = letter grade of A
+Enter a grade between 0 and 100: 78
+grade of 78.0 = letter grade of C
+Enter a grade between 0 and 100: q
+cs100fa2026/8functions/ $
+"""
+ 
+--------ex8.py-------
+def lettergrade(g):
+    if 90 <= g:
+        letter = "A"
+    elif 80 <= g < 90:
+        letter = "B"
+    elif 70 <= g < 80:
+        letter = "C"
+    elif 60 <= g < 70:
+        letter = "D"
+    else:
+        letter = "F"
+    return letter
+
+def isint(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    print("Enter q to quit at anytime...")
+    while True:
+        g = input("Enter a grade between 0 and 100: ")
+        if g == 'q':
+            break
+        if isint(g) == False:
+            print(f"invalid grade: '{g}'")
+            continue  # back to the begining
+        g = int(g)
+        lg = lettergrade(g)
+        print(f"grade of {g} = letter grade of {lg}")
+
+main()
+
+"""sample output
+cs100fa2026/8functions/ $ python ex8.py 
+Enter q to quit at anytime...
+Enter a grade between 0 and 100: out
+invalid grade: 'out'
+Enter a grade between 0 and 100: 56
+grade of 56 = letter grade of F
+Enter a grade between 0 and 100: 99
+grade of 99 = letter grade of A
+Enter a grade between 0 and 100: dehg
+invalid grade: 'dehg'
+Enter a grade between 0 and 100: q
+cs100fa2026/8functions/ $
+"""
+ 
+--------ex9.py-------
+def isint(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+def isfloat(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    print("Enter q to quit at anytime...")
+    while True:
+        g = input("Enter a number: ")
+        if g == 'q':
+            break
+        if isint(g):
+            print(f"'{g}' is an integer")
+        elif isfloat(g):
+            print(f"'{g}' is a float")
+        else:
+            print(f"'{g}' is not a number")
+
+if __name__ == "__main__":
+    main()
+
+"""sample output
+cs100fa2026/8functions/ $ python ex9.py
+Enter q to quit at anytime...
+Enter a number: asfd
+'asfd' is not a number
+Enter a number: 3.4
+'3.4' is a float
+Enter a number: 5
+'5' is an integer
+Enter a number: +12.6
+'+12.6' is a float
+Enter a number: 1e-5
+'1e-5' is a float
+Enter a number: .0008
+'.0008' is a float
+Enter a number: q
+cs100fa2026/8functions/ $
+"""
+ 
+--------ex10.py-------
+import ex9
+
+def main():
+    print("Enter q to quit at anytime...")
+    while True:
+        g = input("Enter a number: ")
+        if g == 'q':
+            break
+        if ex9.isint(g):
+            print(f"'{g}' is an integer")
+        elif ex9.isfloat(g):
+            print(f"'{g}' is a float")
+        else:
+            print(f"'{g}' is not a number")
+
+if __name__ == "__main__":
+    main()
+
+"""sample output
+cs100fa2026/8functions/ $ python ex9.py
+Enter q to quit at anytime...
+Enter a number: asfd
+'asfd' is not a number
+Enter a number: 3.4
+'3.4' is a float
+Enter a number: 5
+'5' is an integer
+Enter a number: +12.6
+'+12.6' is a float
+Enter a number: 1e-5
+'1e-5' is a float
+Enter a number: .0008
+'.0008' is a float
+Enter a number: q
+cs100fa2026/8functions/ $
+"""
+ 

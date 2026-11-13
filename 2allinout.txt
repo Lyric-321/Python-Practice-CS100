@@ -1,0 +1,154 @@
+-------ex1.py-------
+s = "This is a string."
+print(s)
+s = s + s
+print(s)
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex1.py
+This is a string.
+This is a string.This is a string.
+cs100fa2026/2inout/ $
+"""
+ 
+-------ex2.py-------
+s = input("Enter your name: ")
+print("Your name is ", s, ".", sep = "")
+print("Your name is {}.".format(s))
+print(f"Your name is {s}." )
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex2.py
+Enter your name: Lyric
+Your name is Lyric.
+Your name is Lyric.
+Your name is Lyric.
+cs100fa2026/2inout/ $ 
+"""
+ 
+-------ex3.py-------
+uprice = input("Enter the price per pound for apples: ")
+uprice = float(uprice)
+wt =  input("Enter the number of pounds: ")
+wt =  float(wt)
+price = uprice * wt
+ # backslash is for line split
+print( f"{wt} pounds of apples at {uprice:.2f} dollars \
+per pound cost {price:.2f} dollars.")
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex3.py
+Enter the price per pound for apples: 1.99
+Enter the number of pounds: 10
+10.0 pounds of apples at 1.99 dollars per pound cost 19.90 dollars.
+cs100fa2026/2inout/ $
+"""
+ 
+-------ex4.py-------
+a = input("Enter an integer a = ")
+a = int(a)
+b = input("Enter an integer b = ")
+b = int(b)
+
+s = a + b
+d = a - b
+p = a * b
+q = a // b  # for integer division
+pw = a ** b  # for a raised to b
+
+print( f"{a} + {b} = {s}" )
+print( f"{a} - {b} = {a}" )
+print( f"{a} * {b} = {p}" )
+print( f"{a} // {b} = {q}" )
+print( f"{a} ** {b} = {pw}" )
+
+"""SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex4.py
+Enter an integer a = 5
+Enter an integer b = 4
+5 + 4 = 9
+5 - 4 = 5
+5 * 4 = 20
+5 // 4 = 1
+5 ** 4 = 625
+cs100fa2026/2inout/ $ python ex4.py
+Enter an integer a = 45
+Enter an integer b = 5
+45 + 5 = 50
+45 - 5 = 45
+45 * 5 = 225
+45 // 5 = 9
+45 ** 5 = 184528125
+cs100fa2026/2inout/ $
+"""
+ 
+-------ex5.py-------
+a = input("Enter an integer a = ")
+b = input("Enter an integer b = ")
+s = a + b
+print( f"{a} + {b} = {s}" )
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex5.py
+Enter an integer a = 12
+Enter an integer b = -45
+12 + -45 = 12-45
+cs100fa2026/2inout/ $ python ex5.py
+Enter an integer a = 12
+Enter an integer b = 0
+12 + 0 = 120
+cs100fa2026/2inout/ $
+
+Notes: since a and b are strings;
+they are not converted to int;
+so a+b concatenates the strings
+"""
+
+a = input("Enter an integer a = ")
+a = int(a)
+b = input("Enter an integer b = ")
+b = int(b)
+s = a + b
+print( f"{a} + {b} = {s}" )
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex5.py
+Enter an integer a = 12
+Enter an integer b = -45
+12 + -45 = 12-45
+Enter an integer a = 12
+Enter an integer b = -45
+12 + -45 = -33
+cs100fa2026/2inout/ $
+"""
+ 
+-------ex6.py-------
+a = input("Enter a real value a = ")
+a = float(a)
+b = input("Enter a real value b = ")
+b = float(b)
+
+s = a + b
+d = a - b
+p = a * b
+q = a / b  # for real division
+pw = a ** b  # for a raised to b
+
+print( f"{a} + {b} = {s}" )
+print( f"{a} - {b} = {a}" )
+print( f"{a} * {b} = {p}" )
+print( f"{a} / {b} = {q}" )
+print( f"{a} ** {b} = {pw}" )
+
+""" SAMPLE OUTPUT
+cs100fa2026/2inout/ $ python ex6.py
+Enter a real value a = 5.2
+Enter a real value b = 2
+5.2 + 2.0 = 7.2
+5.2 - 2.0 = 5.2
+5.2 * 2.0 = 10.4
+5.2 / 2.0 = 2.6
+5.2 ** 2.0 = 27.040000000000003
+cs100fa2026/2inout/ $ 
+"""
+ 

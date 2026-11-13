@@ -1,0 +1,34 @@
+-------ex1.py-------
+print("Hello, World!")
+ 
+-------ex2.py-------
+name = 'Lyric'
+print('Hello,', name)
+ 
+-------ex3.py-------
+x = 7
+y = 12
+s = x + y
+print("x = ", x)
+print("y = ", y)
+print("s = ", s)
+ 
+-------ex4.py-------
+x = 6
+y = 7
+
+d = x-y
+print(x, "-", y, "=", d)
+
+p = x*y
+print(x, "*", y, "=", p)
+ 
+-------ex5.py-------
+first = "Lyric"
+last = "Chen"
+fullname = first + " " + last
+
+print("My first name is ", first, ".", sep = "")
+print("My last name is ", last, ".", sep = "")
+print("My full name is ", fullname, ".", sep = "")
+ 

@@ -1,0 +1,786 @@
+------------r01.py-----------
+print("*********************************************")
+print("*                                           *")
+print("*                                           *")
+print("*                                           *")
+print("*                                           *")
+print("*                                           *")
+print("*                                           *")
+print("*********************************************")
+
+
+"""sample output
+cs100fa2026/review1/ $ python r01.py
+*********************************************
+*                                           *
+*                                           *
+*                                           *
+*                                           *
+*                                           *
+*                                           *
+*********************************************
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r02.py-----------
+print("********************************")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("*                              *")
+print("********************************")
+
+
+"""sample output
+cs100fa2026/review1/ $ python r02.py
+********************************
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+********************************
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r03.py-----------
+print("********************************")
+print(" *                              *")
+print("  *                              *")
+print("   *                              *")
+print("    *                              *")
+print("     *                              *")
+print("      ********************************")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r03.py
+********************************
+ *                              *
+  *                              *
+   *                              *
+    *                              *
+     *                              *
+      ********************************
+cs100fa2026/review1/ $
+"""
+ 
+------------r04.py-----------
+print("*")
+print("* *")
+print("*  *")
+print("*   *")
+print("*    *")
+print("*     *")
+print("*      *")
+print("*       *")
+print("*        *")
+print("*         *")
+print("*          *")
+print("*************")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r04.py
+*
+* *
+*  *
+*   *
+*    *
+*     *
+*      *
+*       *
+*        *
+*         *
+*          *
+*************
+cs100fa2026/review1/ $
+"""
+ 
+------------r05.py-----------
+print("       *")
+print("      * *")
+print("     *   *")
+print("    *     *")
+print("   *       *")
+print("  *         *")
+print(" *           *")
+print("***************")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r05.py
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+***************
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r06.py-----------
+print("      *********************")
+print("     *                     *")
+print("    *                       *")
+print("   *                         *")
+print("  *                           *")
+print(" *                             *")
+print("*********************************")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r06.py
+      *********************
+     *                     *
+    *                       *
+   *                         *
+  *                           *
+ *                             *
+*********************************
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r07.py-----------
+print("********   ***********       **       **********   **********")
+print("*          *                * *       *        *   *        *")
+print("*          *                  *       *        *   *        *")
+print("*          *                  *       *        *   *        *")
+print("*          ***********        *       *        *   *        *")
+print("*                    *        *       *        *   *        *")
+print("*                    *        *       *        *   *        *")
+print("*                    *        *       *        *   *        *")
+print("********   ***********   **********   **********   **********")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r07.py
+********   ***********       **       **********   **********
+*          *                * *       *        *   *        *
+*          *                  *       *        *   *        *
+*          *                  *       *        *   *        *
+*          ***********        *       *        *   *        *
+*                    *        *       *        *   *        *
+*                    *        *       *        *   *        *
+*                    *        *       *        *   *        *
+********   ***********   **********   **********   **********
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r08.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    ftmp = input("Enter temperature in F degrees: " )
+    ftmp = float(ftmp)
+    ctmp = 5*(ftmp-32)/9
+    print( f"{ftmp:.2f} degrees F = {ctmp:.2f} degrees C" )
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r08.py
+Enter q to quit or anything else to continue:
+Enter temperature in F degrees: 50
+50.00 degrees F = 10.00 degrees C
+Enter q to quit or anything else to continue:
+Enter temperature in F degrees: 60
+60.00 degrees F = 15.56 degrees C
+Enter q to quit or anything else to continue:
+Enter temperature in F degrees: 70
+70.00 degrees F = 21.11 degrees C
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r09.py-----------
+while True:
+    ans = input("Enter q to quit or anthing else to continue: ")
+    if ans == "q":
+        break
+    lbs = input("Enter weight measured in pounds: ")
+    lbs = float(lbs)
+    g = round(453.59 * lbs)     # rounds to the nearest gram
+    print( f"{lbs} lbs = {g} grams")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r09.py
+Enter q to quit or anthing else to continue:
+Enter weight measured in pounds: 1
+1.0 lbs = 454 grams
+Enter q to quit or anthing else to continue:
+Enter weight measured in pounds: 1.5
+1.5 lbs = 680 grams
+Enter q to quit or anthing else to continue: 
+Enter weight measured in pounds: 12
+12.0 lbs = 5443 grams
+Enter q to quit or anthing else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r10.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    ht = input("Enter height in feet and inches: ")
+    ht = ht.split(' ')
+    print(ht)
+    ft = int(ht[0])
+    inch = int(ht[1])
+    cm =  round(2.54 * (12 * ft + inch))
+    print( f"{ft} ft {inch} inch = {cm} cm")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r10.py
+Enter q to quit or anything else to continue:
+Enter height in feet and inches: 5 4
+['5', '4']
+5 ft 4 inch = 163 cm
+Enter q to quit or anything else to continue: 
+Enter height in feet and inches: 6 0
+['6', '0']
+6 ft 0 inch = 183 cm
+Enter q to quit or anything else to continue:
+Enter height in feet and inches: 5 8
+['5', '8']
+5 ft 8 inch = 173 cm
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r11.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    cm = int(input("Enter height in centimeters: "))
+    totinches = int(cm // 2.54)
+    ft = totinches // 12
+    inches = totinches % 12
+    print( f"{cm} cm = {ft} ft {inches} inches" )
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r11.py
+Enter q to quit or anything else to continue:
+Enter height in centimeters: 185
+185 cm = 6 ft 0 inches
+Enter q to quit or anything else to continue:
+Enter height in centimeters: 100
+100 cm = 3 ft 3 inches
+Enter q to quit or anything else to continue:
+Enter height in centimeters: 160
+160 cm = 5 ft 2 inches
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r12.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: " )
+    if ans == "q":
+        break
+    a = int(input("Enter integer a = "))
+    b = int(input("Enter integar b = "))
+    if b == 0:
+        print("Division by 0 is undefind. ")
+    else:
+        q = a // b
+        r = a % b
+        print( f"{a} = {b} * {q} + {r}")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r12.py
+Enter q to quit or anything else to continue:
+Enter integer a = 34
+Enter integar b = 6
+34 = 6 * 5 + 4
+Enter q to quit or anything else to continue:
+Enter integer a = 4
+Enter integar b = 2
+4 = 2 * 2 + 0
+Enter q to quit or anything else to continue:
+Enter integer a = 5
+Enter integar b = 0
+Division by 0 is undefind.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r13.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    fname = input("Enter first name: ")
+    lname = input("Enter last name: ")
+    name = fname + ' ' + lname
+    print( f"The full name you entered is {name}. ")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r13.py
+Enter q to quit or anything else to continue:
+Enter first name: Lyric
+Enter last name: Chen
+The full name you entered is Lyric Chen.
+Enter q to quit or anything else to continue:
+Enter first name: Siri
+Enter last name: Cooper
+The full name you entered is Siri Cooper.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r14.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    s = input("Enter a string: ")
+    n = int(input("Enter an integer: "))
+    sn = s * n
+    print( f"{sn}")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r14.py
+Enter q to quit or anything else to continue:
+Enter a string: cat
+Enter an integer: 3
+catcatcat
+Enter q to quit or anything else to continue:
+Enter a string: cat
+Enter an integer: 0
+
+Enter q to quit or anything else to continue:
+Enter a string: cat
+Enter an integer: -2
+
+Enter q to quit or anything else to continue:
+Enter a string: cat
+Enter an integer: 20
+catcatcatcatcatcatcatcatcatcatcatcatcatcatcatcatcatcatcatcat
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r15.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    a = float(input("Enter number a = "))
+    b = float(input("Enter number b = "))
+    if a > b:
+        dist = a - b
+    else:
+        dist = b - a
+    print( f"The distance between {a} and {b} is {dist}. ")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r15.py
+Enter q to quit or anything else to continue: 8
+Enter number a = 8
+Enter number b = 6
+The distance between 8.0 and 6.0 is 2.0.
+Enter q to quit or anything else to continue:
+Enter number a = 2
+Enter number b = 7
+The distance between 2.0 and 7.0 is 5.0.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r16.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    x = float(input("Enter a number x: "))
+    if x > 0:
+        print( f"{x} is a positive number.")
+    else:
+        print( f"{x} is not a positive number.")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r16.py
+Enter q to quit or anything else to continue:
+Enter a number x: 6
+6.0 is a positive number.
+Enter q to quit or anything else to continue:
+Enter a number x: 0
+0.0 is not a positive number.
+Enter q to quit or anything else to continue:
+Enter a number x: -7
+-7.0 is not a positive number.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r17.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    x = float(input("Enter value 1: "))
+    y = float(input("Enter value 2: "))
+    if x > y:
+        print( f"{x} is greater than {y}. ")
+    elif x == y:
+        print( f"{x} is equal to {y}. ")
+    else:
+        print( f"{x} is less than {y}. ")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r17.py
+Enter q to quit or anything else to continue:
+Enter value 1: 3.4
+Enter value 2: 5.21
+3.4 is less than 5.21.
+Enter q to quit or anything else to continue:
+Enter value 1: 5.5
+Enter value 2: -2.3
+5.5 is greater than -2.3.
+Enter q to quit or anything else to continue:
+Enter value 1: 8
+Enter value 2: 8
+8.0 is equal to 8.0.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r18.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    x = float(input("Enter value 1: "))
+    y = float(input("Enter value 2: "))
+    z = float(input("Enter value 3: "))
+    mx = x
+    if mx < y:
+        mx = y
+    if mx < z:
+        mx = z
+    print( f"The largest value is {mx}. ")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r18.py
+Enter q to quit or anything else to continue:
+Enter value 1: 5
+Enter value 2: 6
+Enter value 3: 7
+The largest value is 7.0.
+Enter q to quit or anything else to continue:
+Enter value 1: 9
+Enter value 2: 9
+Enter value 3: 9
+The largest value is 9.0. 
+Enter q to quit or anything else to continue:
+Enter value 1: 6
+Enter value 2: 4
+Enter value 3: 0
+The largest value is 6.0.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r19.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    w1 = input("Enter word 1: ")
+    w2 = input("Enter word 2: ")
+    if w1 > w2:   #swap w1 and w2
+        t = w1
+        w1 = w2
+        w2 = t
+    print( f"In alphabetical order: {w1},{w2}. ")
+
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r19.py
+Enter q to quit or anything else to continue:
+Enter word 1: cat
+Enter word 2: cop
+In alphabetical order: cat,cop.
+Enter q to quit or anything else to continue:
+Enter word 1: coop
+Enter word 2: caot
+In alphabetical order: caot,coop.
+Enter q to quit or anything else to continue:
+Enter word 1: nice
+Enter word 2: mansae
+In alphabetical order: mansae,nice.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r20.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    w1 = input("Enter word 1: ")
+    w2 = input("Enter word 2: ")
+    w3 = input("Enter word 3: ")
+    if w1 > w2:     #swap w1 and w2
+        t = w1
+        w1 = w2
+        w2 = t
+    if w1 > w3:     #swap w1 and w3
+        t = w1
+        w1 = w3
+        w3 = t
+    if w2 > w3:     #swap w2 and w3
+        t = w2
+        w2 = w3
+        w3= t
+    print( f"In alphabetical order: {w1},{w2},{w3}. ")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r20.py
+Enter q to quit or anything else to continue:
+Enter word 1: dog
+Enter word 2: cat
+Enter word 3: mouse
+In alphabetical order: cat,dog,mouse.
+Enter q to quit or anything else to continue:
+Enter word 1: nice
+Enter word 2: pretty
+Enter word 3: beatiful
+In alphabetical order: beatiful,nice,pretty.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r21.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    g = float(input("Enter a grade between 0 to 100: "))
+    if g >= 90:
+        letter = "A"
+    elif 80 <= g < 90:
+        letter = "B"
+    elif 70 <= g < 80:
+        letter = "C"
+    elif 60 <= g < 70:
+        letter = "D"
+    else:
+        letter = "F"
+    print( f"A score of {g} is equivalent to a letter grade of {letter}. ")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r21.py
+Enter q to quit or anything else to continue:
+Enter a grade between 0 to 100: 97
+A score of 97.0 is equivalent to a letter grade of A.
+Enter q to quit or anything else to continue:
+Enter a grade between 0 to 100: 87
+A score of 87.0 is equivalent to a letter grade of B.
+Enter q to quit or anything else to continue:
+Enter a grade between 0 to 100: 66
+A score of 66.0 is equivalent to a letter grade of D.
+Enter q to quit or anything else to continue:
+Enter a grade between 0 to 100: 23
+A score of 23.0 is equivalent to a letter grade of F.
+Enter q to quit or anything else to continue:
+Enter a grade between 0 to 100: -12
+A score of -12.0 is equivalent to a letter grade of F.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r22.py-----------
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    f = input("Enter a fraction: ")
+    f = f.split('/')
+    num = int(f[0])
+    den = int(f[1])
+    dec = num / den
+    print( f"{num} / {den} = {dec}")
+
+
+"""sample output
+cs100fa2026/review1/ $ python r22.py
+Enter q to quit or anything else to continue:
+Enter a fraction: 1/2
+1 / 2 = 0.5
+Enter q to quit or anything else to continue:
+Enter a fraction: 4/5
+4 / 5 = 0.8
+nter q to quit or anything else to continue: q
+cs100fa2026/review1/ $ 
+"""
+ 
+------------r23.py-----------
+print( "You roll 2 dices. If roll the same value you win. \
+Otherwise you lose.")
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    import random as rd
+    r1 = rd.randint(1,6)
+    r2 = rd.randint(1,6)
+    print( f"You rolled {r1} {r2}")
+    if r1 == r2:
+        print( "You win. ")
+    else:
+        print( "You lose. ")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r23.py
+You roll 2 dices. If roll the same value you win. Otherwise you lose.
+Enter q to quit or anything else to continue:
+You rolled 4 5
+You lose.
+Enter q to quit or anything else to continue:
+You rolled 4 5
+You lose.
+Enter q to quit or anything else to continue:
+You rolled 1 1
+You win.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r24.py-----------
+print( "You roll 2 dices. If you roll consecutive \
+values, you win. Otherwise you lose.")
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    import random as rd
+    r1 = rd.randint(1,6)
+    r2 = rd.randint(1,6)
+    print( f"You rolled {r1} {r2}")
+    if abs(r1 - r2) == 1:
+        print("You win.")
+    else:
+        print("You lose.")
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r24.py
+You roll 2 dices. If you roll consecutive values, you win. Otherwise you lose.
+Enter q to quit or anything else to continue:
+You rolled 1 2
+You win.
+Enter q to quit or anything else to continue:
+You rolled 4 1
+You lose.
+Enter q to quit or anything else to continue:
+You rolled 5 4
+You win.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 
+------------r25.py-----------
+print("You roll 2 dices. If you roll equal or consecutive values, \
+Otherwise you lose. ")
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    import random as rd
+    r1 = rd.randint(1,6)
+    r2 = rd.randint(1,6)
+    print( f"You rolled {r1} {r2}")
+    if 0 <= abs(r1-r2) <= 1:
+        print("You win.")
+    else:
+        print("You lose.")
+
+
+
+
+"""sample output
+cs100fa2026/review1/ $ python r25.py
+You roll 2 dices. If you roll equal or consecutive values, Otherwise you lose.
+Enter q to quit or anything else to continue:
+You rolled 5 1
+You lose.
+Enter q to quit or anything else to continue:
+You rolled 2 5
+You lose.
+Enter q to quit or anything else to continue:
+You rolled 2 3
+You win.
+Enter q to quit or anything else to continue:
+You rolled 6 6
+You win.
+Enter q to quit or anything else to continue:
+You rolled 4 5
+You win.
+Enter q to quit or anything else to continue: q
+cs100fa2026/review1/ $
+"""
+ 

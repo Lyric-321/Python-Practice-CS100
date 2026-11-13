@@ -1,0 +1,185 @@
+-------ex1.py-------
+# string initialization
+s1 = 'Hello there!'
+s2 = "This string 'uses' double quotes."
+s3 = "This string \"uses\" double quotes."
+
+# multi-line strings use pairs of triple quotes
+s4 = """This string occupies
+several
+lines"""
+
+
+print(s1)
+print(s2)
+print(s3)
+print(s4)
+
+'''
+SAMPLE OUTPUT
+cs100fa2026/4strings/ $ python ex1.py
+Hello there!
+This string 'uses' double quotes.
+This string "uses" double quotes.
+This string occupies
+several
+lines
+cs100fa2026/4strings/ $
+'''
+ 
+-------ex2.py-------
+# difference between the single and double quote strings
+s1 = 'She said: "Hello there!"'
+s2 = 'She said: \'Hello there!\''
+s3 = "She said: 'Hello there!'"
+s4 = "She said: \"Hello there!\""
+
+print(s1)
+print(s2)
+print(s3)
+print(s4)
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex2.py
+She said: "Hello there!"
+She said: 'Hello there!'
+She said: 'Hello there!'
+She said: "Hello there!"
+cs100fa2026/4strings/ $
+'''
+ 
+-------ex3.py-------
+# the bracket operator []
+s = input("Enter a string: " )
+print( f"You entered the following '{s}'" )
+print( f"The first  char is '{s[0]}'" )
+print( f"The second char is '{s[1]}'" )
+print( f"The last   char is '{s[len(s)-1]}'" )
+print( f"The last   char is '{s[-1]}'" )
+
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex3.py
+Enter a string: Today is nice.
+You entered the following 'Today is nice.'
+The first  char is 'T'
+The second char is 'o'
+The last   char is '.'
+The last   char is '.'
+cs100fa2026/4strings/ $
+'''
+ 
+-------ex4.py-------
+# the bracket operator [] for range
+s = input("Enter a string: " )
+print( f"You entered the following '{s}'" )
+
+# the chunk of first 5 chars
+s1 = s[0:5]
+
+# the chunk of 3 chars starting at pos 5
+s2 = s[5:3]
+
+# the chunk of last 4 chars
+s3 = s[-4:]
+
+print( f"The substring s[0:5] '{s1}'")
+print( f"The substring s[5:3] '{s2}'")
+print( f"The substring s[-4:] '{s3}'")
+
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex4.py
+Enter a string: Today is a nice day.
+You entered the following 'Today is a nice day.'
+The substring s[0:5] 'Today'
+The substring s[5:3] ''
+The substring s[-4:] 'day.'
+'''
+ 
+-------ex5.py-------
+# create a valid qcc email for students
+fname = input("Enter your first name: " )
+lname = input("Enter your last name: " )
+id = input("Enter your CUNYid: " )
+tail = "@login.cuny.edu"
+
+email = fname + "." + lname + id[-2:] + tail
+
+print( f"Your email is '{email}'")
+
+
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex5.py
+Enter your first name: weijia
+Enter your last name: chen
+Enter your CUNYid: 24806578
+Your email is 'weijia.chen78@login.cuny.edu'
+cs100fa2026/4strings/ $ 
+'''
+ 
+-------ex6.py-------
+# Read a string and print its characters
+# and their position one at a time
+s = input("Enter a string: ")
+
+for i in range(len(s)):
+    print( f"char at {i} is '{s[i]}'" )
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex6.py
+Enter a string: today is 09/24.
+char at 0 is 't'
+char at 1 is 'o'
+char at 2 is 'd'
+char at 3 is 'a'
+char at 4 is 'y'
+char at 5 is ' '
+char at 6 is 'i'
+char at 7 is 's'
+char at 8 is ' '
+char at 9 is '0'
+char at 10 is '9'
+char at 11 is '/'
+char at 12 is '2'
+char at 13 is '4'
+char at 14 is '.'
+cs100fa2026/4strings/ $
+'''
+ 
+-------ex7.py-------
+# Read a string and print its characters
+# and their position one at a time
+# this time in reverse order
+s = input("Enter a string: ")
+
+for i in range(len(s)-1,-1,-1):
+    print( f"char at {i} is '{s[i]}'" )
+
+'''
+Sample Output
+cs100fa2026/4strings/ $ python ex7.py
+Enter a string: today is nice.
+char at 13 is '.'
+char at 12 is 'e'
+char at 11 is 'c'
+char at 10 is 'i'
+char at 9 is 'n'
+char at 8 is ' '
+char at 7 is 's'
+char at 6 is 'i'
+char at 5 is ' '
+char at 4 is 'y'
+char at 3 is 'a'
+char at 2 is 'd'
+char at 1 is 'o'
+char at 0 is 't'
+cs100fa2026/4strings/ $
+'''
+ 

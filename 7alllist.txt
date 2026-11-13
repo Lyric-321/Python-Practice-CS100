@@ -1,0 +1,270 @@
+--------ex1.py-------
+letters = ['x','y','z']
+print(f"{letters} is a list of strings.")
+
+
+numbers = [1,2,-17,-8]
+print(f"{numbers} is a list of ints.")
+
+# print elements using a for loop
+print(f"The elements of letters are: ")
+for i in range(len(letters)):
+    print(f"letters[{i}] = {letters[i]}")
+
+print(f"The elements of numbers are: ")
+for item in numbers:
+    print(item)
+
+mixed = letters+numbers
+print(f"The elements of mixed are: ")
+for item in mixed:
+    print(item)
+
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex1.py
+['x', 'y', 'z'] is a list of strings.
+[1, 2, -17, -8] is a list of ints.
+The elements of letters are:
+letters[0] = x
+letters[1] = y
+letters[2] = z
+The elements of numbers are:
+1
+2
+-17
+-8
+The elements of mixed are:
+x
+y
+z
+1
+2
+-17
+-8
+cs100fa2026/7lists/ $ 
+'''
+ 
+--------ex2.py-------
+while True:
+    s = input("Enter several numbers or q to quit:\n")
+    if s == "q":
+        break
+    s = s.split(' ')  # list of strings
+    nums = []    # empty list
+    for i in range(len(s)):
+        try:   # try to convert the string to a float(execute the code)
+            v = float(s[i])
+            nums.append(v)   # add an item to the end of the list
+        except ValueError:   #skip item if it is not a valid number
+            v
+    print(nums)
+
+
+
+
+
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex2.py
+Enter several numbers or q to quit:
+1 2 3
+[1.0, 2.0, 3.0]
+Enter several numbers or q to quit:
+45 asdf -89 456
+[45.0, -89.0, 456.0]
+Enter several numbers or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 
+--------ex3.py-------
+while True:
+    s = input("Enter several numbers or q to quit:\n")
+    if s == "q":
+        break
+    s = s.split(' ')
+    nums = []
+    for i in range(len(s)):
+        try:
+            v = float(s[i])
+            nums.append(v)
+        except ValueError:
+            v
+    print(nums)
+    s = 0
+    for value in nums:
+        s += value
+    print(f"The sum of list is {s}. ")
+
+
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex3.py
+Enter several numbers or q to quit:
+1 2 3
+[1.0, 2.0, 3.0]
+The sum of list is 6.0.
+Enter several numbers or q to quit:
+2 3 0 1
+[2.0, 3.0, 0.0, 1.0]
+The sum of list is 6.0.
+Enter several numbers or q to quit:
+12 343 asd -34
+[12.0, 343.0, -34.0]
+The sum of list is 321.0.
+Enter several numbers or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 
+--------ex4.py-------
+while True:
+    s = input("Enter several numbers or q to quit:\n")
+    if s == "q":
+        break
+    s = s.split(' ')
+    nums = []
+    for i in range(len(s)):
+        try:
+            v = float(s[i])
+            nums.append(v)
+        except ValueError:
+            v
+    print(nums)
+    s = 0
+    for value in nums:
+        s += value
+    av = s / len(nums)
+    print(f"The average value is {av}. ")
+
+
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex4.py
+Enter several numbers or q to quit:
+1 2 3
+[1.0, 2.0, 3.0]
+The average value is 2.0.
+Enter several numbers or q to quit:
+1 2 3 4 5 90
+[1.0, 2.0, 3.0, 4.0, 5.0, 90.0]
+The average value is 17.5.
+Enter several numbers or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 
+--------ex5.py-------
+while True:
+    s = input("Enter several numbers or q to quit:\n")
+    if s == "q":
+        break
+    s = s.split(' ')
+    nums = []
+    for i in range(len(s)):
+        try:
+            v = float(s[i])
+            nums.append(v)
+        except ValueError:
+            v
+    print(nums)
+    max = min = nums[0]
+    for value in nums:
+        if min > value:
+            min = value
+        if max < value:
+            max = value
+    print(f"The min value is {min}. ")
+    print(f"The max value is {max}. ")
+
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex5.py
+Enter several numbers or q to quit:
+1 2 3
+[1.0, 2.0, 3.0]
+The min value is 1.0.
+The max value is 3.0.
+Enter several numbers or q to quit:
+-5 8 0
+[-5.0, 8.0, 0.0]
+The min value is -5.0.
+The max value is 8.0.
+Enter several numbers or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 
+--------ex6.py-------
+while True:
+    s = input("Enter several numbers or q to quit:\n")
+    if s == "q":
+        break
+    s = s.split(' ')
+    nums = []
+    for i in range(len(s)):
+        try:
+            v = float(s[i])
+            nums.append(v)
+        except ValueError:
+            v
+    print(f"The value of the list are:\n{nums}. ")
+    nums.sort()   # sort the list in ascending order
+    print(f"The sorted values of the list are:\n{nums}. ")
+    nums.sort(reverse=True)   # sort the list in descending order
+    print(f"The reversed sorted values of the list are:\n{nums}. ")
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex6.py
+Enter several numbers or q to quit:
+5 6 3 8 1
+The value of the list are:
+[5.0, 6.0, 3.0, 8.0, 1.0].
+The sorted values of the list are:
+[1.0, 3.0, 5.0, 6.0, 8.0].
+The reversed sorted values of the list are:
+[8.0, 6.0, 5.0, 3.0, 1.0].
+Enter several numbers or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 
+--------ex7.py-------
+import re   # import regular expression module
+while True:
+    s = input("Enter a sentence or q to quit:\n")
+    if s == "q":
+        break
+    words = re.split(r'\W+', s)  # split words by non-word characters
+    words.pop(len(words)-1)
+    print(f"The list of words is:\n{words}. ")
+    words.sort(reverse=True,key=str.lower)  # sort words in descending order(case-insensitive)
+    print(f"The reversed sorted list of words is:\n{words}. ")
+
+
+'''sample output
+cs100fa2026/7lists/ $ python ex7.py
+Enter a sentence or q to quit:
+today is a nice day?
+The list of words is:
+['today', 'is', 'a', 'nice', 'day'].
+The sorted list of words is:
+['today', 'nice', 'is', 'day', 'a'].
+Enter a sentence or q to quit:
+A a B b C c
+The list of words is:
+['A', 'a', 'B', 'b', 'C'].
+The reversed sorted list of words is:
+['C', 'B', 'b', 'A', 'a'].
+Enter a sentence or q to quit:
+q
+cs100fa2026/7lists/ $
+'''
+ 

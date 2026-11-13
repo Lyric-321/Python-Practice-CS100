@@ -1,0 +1,313 @@
+-------ex1.py-------
+""" In this program
+we will read a grade.
+If the grade is at least 60,
+we will print a message "This is a passing grade."
+Otherwise we will print "This is a failing grade."
+"""
+
+g = input("Enter a grade between 0 and 100: ")
+g = float(g)
+if g >= 60:
+    print(f"{g} is a passing grade.")
+else:
+    print(f"{g} is a failing grade.")
+
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex1.py
+Enter a grade between 0 and 100: 2
+2.0 is a failing grade.
+cs100fa2026/5conditons/ $ python ex1.py
+Enter a grade between 0 and 100: 60
+60.0 is a passing grade.
+cs100fa2026/5conditons/ $ python ex1.py
+Enter a grade between 0 and 100: 70
+70.0 is a passing grade.
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex2.py-------
+""" In this program
+we will read a grade.
+we will assign a letter grade.
+"""
+
+g = input("Enter a grade between 0 and 100: ")
+g = float(g)
+if g >= 90:
+    letter = "A"
+elif 80 <= g and g < 90:
+    letter = "B"
+elif 70 <= g and g < 80:
+    letter = "C"
+elif 60 <= g and g < 70:
+    letter = "D"
+else:
+    letter = "F"
+
+if g >= 60:
+    print(f"{g} is a letter grade of {letter}")
+    print(f"{g} is a passing grade.")
+else:
+    print(f"{g} is a letter grade of {letter}")
+    print(f"{g} is a failing grade.")
+
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex2.py
+Enter a grade between 0 and 100: 89
+89.0 is a letter grade of B
+89.0 is a passing grade.
+cs100fa2026/5conditons/ $ python ex2.py
+Enter a grade between 0 and 100: 77
+77.0 is a letter grade of C
+77.0 is a passing grade.
+cs100fa2026/5conditons/ $ python ex2.py
+Enter a grade between 0 and 100: 56
+56.0 is a letter grade of F
+56.0 is a failing grade.
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex3.py-------
+""" In this program
+we will read a grade.
+we will assign a letter grade.
+"""
+
+g = input("Enter a grade between 0 and 100: ")
+g = float(g)
+if g >= 90:
+    letter = "A"
+if 80 <= g and g < 90:
+    letter = "B"
+if 70 <= g and g < 80:
+    letter = "C"
+if 60 <= g and g < 70:
+    letter = "D"
+if g < 60:
+    letter = "F"
+if g >= 60:
+    print(f"{g} is a letter grade of {letter}")
+    print(f"{g} is a passing grade.")
+else:
+    print(f"{g} is a letter grade of {letter}")
+    print(f"{g} is a failing grade.")
+
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex3.py
+Enter a grade between 0 and 100: 89
+89.0 is a letter grade of B
+89.0 is a passing grade.
+cs100fa2026/5conditons/ $ python ex3.py
+Enter a grade between 0 and 100: 79
+79.0 is a letter grade of C
+79.0 is a passing grade.
+cs100fa2026/5conditons/ $ python ex3.py
+Enter a grade between 0 and 100: 56
+56.0 is a letter grade of F
+56.0 is a failing grade.
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex4.py-------
+""" In this program
+we will read a grade.
+we will assign a letter grade.
+we will run the program repeatedly without quitting.
+"""
+
+
+print("Enter q to quit...")
+while True:
+    g = input("Enter a grade between 0 and 100: ")
+    if g == "q":
+        break
+    g = float(g)
+    if g >= 90:
+        letter = "A"
+    elif 80 <= g and g < 90:
+        letter = "B"
+    elif 70 <= g and g < 80:
+        letter = "C"
+    elif 60 <= g and g < 70:
+        letter = "D"
+    else:
+        letter = "F"
+
+    if g >= 60:
+        print(f"{g} is a letter grade of {letter}")
+        print(f"{g} is a passing grade.")
+    else:
+        print(f"{g} is a letter grade of {letter}")
+        print(f"{g} is a failing grade.")
+
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex4.py
+Enter q to quit...
+Enter a grade between 0 and 100: 100
+100.0 is a letter grade of A
+100.0 is a passing grade.
+Enter a grade between 0 and 100: 56
+56.0 is a letter grade of F
+56.0 is a failing grade.
+Enter a grade between 0 and 100: 90
+90.0 is a letter grade of A
+90.0 is a passing grade.
+Enter a grade between 0 and 100: 78
+78.0 is a letter grade of C
+78.0 is a passing grade.
+Enter a grade between 0 and 100: 66
+66.0 is a letter grade of D
+66.0 is a passing grade.
+Enter a grade between 0 and 100: q
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex5.py-------
+""" In this program
+we will print whether the number is positive negative
+or neither
+"""
+
+print("Enter q to quit: ")
+while True:
+    x = input("Enter a number x: ")
+    if x == "q":
+        break
+    x = float(x)
+    if x > 0:
+        print(f"{x} is positive.")
+    elif x <0:
+        print(f"{x} is negative.")
+    else:
+        print(f"{x} is neither positive nor negative.")
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex5.py
+Enter q to quit:
+Enter a number x: 56
+56.0 is positive.
+Enter a number x: -89
+-89.0 is negative.
+Enter a number x: 0
+0.0 is neither positive nor negative.
+Enter a number x: q
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex6.py-------
+""" In this program
+determine the smallest of 2 values
+"""
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    n1 = float(input("Enter a number n1: "))
+    n2 = float(input("Enter a number n2: "))
+
+    m = n1
+    if m > n2:
+        m = n2
+    print(f"{m} is the smallest value.")
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex6.py
+Enter q to quit or anything else to continue: 
+Enter a number n1: 2
+Enter a number n2: 3
+2.0 is the smallest value.
+Enter q to quit or anything else to continue:
+Enter a number n1: -4
+Enter a number n2: 5
+-4.0 is the smallest value.
+Enter q to quit or anything else to continue:
+Enter a number n1: 5
+Enter a number n2: -8
+-8.0 is the smallest value.
+Enter q to quit or anything else to continue: q
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex7.py-------
+""" In this program
+determine the smallest of 3 values
+"""
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    n1 = float(input("Enter a number n1: "))
+    n2 = float(input("Enter a number n2: "))
+    n3 = float(input("Enter a number n3: "))
+
+    m = n1
+    if m > n2:
+        m = n2
+    if m > n3:
+        m = n3
+        print(f"{m} is the smallest value.")
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex7.py
+Enter q to quit or anything else to continue:
+Enter a number n1: 2
+Enter a number n2: 3
+Enter a number n3: 1
+1.0 is the smallest value.
+Enter q to quit or anything else to continue:
+Enter a number n1: 3
+Enter a number n2: 1
+Enter a number n3: 2
+Enter q to quit or anything else to continue: q
+cs100fa2026/5conditons/ $
+"""
+ 
+-------ex8.py-------
+""" In this program
+swap 2 values.
+"""
+
+while True:
+    ans = input("Enter q to quit or anything else to continue: ")
+    if ans == "q":
+        break
+    n1 = float(input("Enter a number n1: "))
+    n2 = float(input("Enter a number n2: "))
+
+    print(f"n1 = {n1}, n2 = {n2}")
+    t = n1
+    n1 = n2
+    n2 = t
+    print(f"n1 = {n1}, n2 = {n2}")
+
+
+""" Sample output
+cs100fa2026/5conditons/ $ python ex8.py
+Enter q to quit or anything else to continue:
+Enter a number n1: 2
+Enter a number n2: 3
+n1 = 2.0, n2 = 3.0
+n1 = 3.0, n2 = 2.0
+Enter q to quit or anything else to continue:
+Enter a number n1: 5
+Enter a number n2: -9.1
+n1 = 5.0, n2 = -9.1
+n1 = -9.1, n2 = 5.0
+Enter q to quit or anything else to continue: q
+cs100fa2026/5conditons/ $
+"""
+ 
